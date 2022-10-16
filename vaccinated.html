@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/dashboard.css">
+    <title>Vaccinated</title>
+</head>
+<body>
+    <div id="nav"></div>
+
+    <form id="form">
+        <div>
+            <label for="">Sort by age</label>
+            <select name="age" id="" onchange="sortByAge(event)" >
+                <option value="" selected disabled>Sort By Age</option>
+                <option value="alth">Age low to heigh</option>                
+                <option value="ahtl">Age heigh to low</option>
+            </select> 
+        </div>
+        <div>
+            <label for="">Filter by Vaccine</label>
+            <select name="vaccine" id="" onchange="filterByVaccine(event)">
+                <option value="" selected disabled>Filter By Vaccine</option>
+                <option value="Covishield">Covishield</option>
+                <option value="Covaxin">Covaxin</option>
+                <option value="Sputnik">Sputnik</option>
+            </select>            
+        </div>
+    
+        <div>
+            <label for="">Filter by Priority</label>
+            <select name="priority" id="" onchange="filterByPriority(event)">
+                <option value="" selected disabled>Filter By Priority</option>
+                <option value="p0">p0</option>
+                <option value="p1">p1</option>
+                <option value="p2">p2</option>
+                <option value="p3">p3</option>
+            </select>            
+        </div>
+    </form>
+    
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Destination</th>
+            <th>Priority</th>
+            <th>Unique Id</th>
+            <th>Vaccine</th>                     
+        </tr>
+        <tbody id="tableData"></tbody>       
+    </table>
+</body>
+</html>
+<script type="module">
+    import { NavbarForOtherpages } from './components/navbar.js';
+    document.getElementById('nav').innerHTML = NavbarForOtherpages();
+</script>
+<script src="./components/vaccinated.js"></script>

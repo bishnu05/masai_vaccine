@@ -1,0 +1,50 @@
+.formDiv{
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    border: 3px solid red;
+    padding: 20px;
+    border-radius: 10px;  
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+.formDiv>h1{
+    text-align: center;
+    color: rgb(130, 6, 6);
+}
+#form>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  
+    gap: 5px;  
+}
+#form>div>label{
+    margin-top: 20px;
+    font-size: large;
+    font-weight: bold;
+}
+#form>div>input[type="submit"]{
+    cursor: pointer;
+    margin-top: 30px;
+    font-size: large;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+#form>div>input[type="text"],
+#form>div>input[type="number"]{
+  padding: 5px;
+  border-radius: 5px;
+  border-color: #ccc;
+}
+select{
+    border-radius: 5px;  
+    padding: 5px;
+}
+
+@media only screen and (min-width: 1000px){
+    .formDiv{
+        width: 40%;
+    }
+}
+

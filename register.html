@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/register.css">
+    <title>Register</title>
+  </head>
+  <body>
+    <div id="nav"></div>
+    <div class="formDiv">
+      <h1>Registeration Form</h1>
+      <form id="form" onsubmit="registerfn(event)">
+        <div>
+          <label>Unique ID</label>
+          <input type="text" name="ID" placeholder="Unique Id" required />
+        </div>
+        <div>
+          <label>Name</label>
+          <input
+            type="text"
+            name="Name"
+            placeholder="Your Full Name"
+            minlength="4"
+            required
+          />
+        </div>
+        <div>
+          <label>Age</label>
+          <input
+            type="number"
+            name="Age"
+            placeholder="age"
+            min="18"
+            max="40"
+            required
+          />
+        </div>
+        <div>
+          <label>Designation</label>
+          <div>
+            Employee
+            <input type="radio" name="Designation" value="Employee" required />
+            Student
+            <input type="radio" name="Designation" value="Student" required />
+          </div>
+        </div>
+        <div>
+          <label>Priority</label>
+          <select name="Priority" id="" required>
+            <option value="" selected disabled>Choose Priority</option>
+            <option value="p0">p0</option>
+            <option value="p1">p1</option>
+            <option value="p2">p2</option>
+            <option value="p3">p3</option>
+          </select>
+        </div>
+        <div>
+          <label>Choose Vaccine</label>
+          <select name="Vaccine" id="" required>
+            <option value="" selected disabled>Choose Vaccine</option>
+            <option value="Covishield">Covishield</option>
+            <option value="Covaxin">Covaxin</option>
+            <option value="Sputnik">Sputnik</option>
+          </select>
+        </div>
+  
+        <div>
+          <input type="submit" value="Register" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+<script type="module">
+  import { NavbarForOtherpages } from "./components/navbar.js";
+  document.getElementById("nav").innerHTML = NavbarForOtherpages();
+</script>
+<script src="./components/register.js"></script>
